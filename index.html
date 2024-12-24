@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #fact-display {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Football Facts Generator</h1>
+        <button id="generate-fact">Generate Fact</button>
+        <p id="fact-display"></p>
+    </div>
+    <script>
+        const facts = [
+            "Football is the most popular sport in the world, with an estimated 4 billion fans.",
+            "The FIFA World Cup is the most prestigious football tournament, held every four years since 1930, except in 1942 and 1946 due to World War II.",
+            "The first football club in the world is Sheffield FC, founded in 1857 in England.",
+            "The offside rule has been part of the game since its early codification in the 19th century.",
+            "Lionel Messi holds the record for the most goals scored in a calendar year, netting 91 goals in 2012.",
+            "The Rungrado 1st of May Stadium in Pyongyang, North Korea, is the largest stadium in the world, with a capacity of around 114,000.",
+            "The fastest goal in football history was scored by Hakan Şükür just 11 seconds into a match against South Korea in 2002.",
+            "Women's football has grown significantly, with the FIFA Women's World Cup being held every four years since 1991.",
+            "The first footballs were made from animal bladders, and modern footballs are typically made from synthetic materials.",
+            "The red card system was introduced in the 1970 World Cup to send players off for serious fouls or misconduct.",
+            "Real Madrid holds the record for the most UEFA Champions League titles, with 14 victories as of 2023.",
+            "The first official international football match was played between Scotland and England in 1872.",
+            "Goalkeepers are the only players allowed to use their hands during play and can also score goals, though it's rare.",
+            "The English Premier League is one of the most watched football leagues globally, attracting millions of viewers each week.",
+            "Video Assistant Referee (VAR) technology was introduced to help referees make better decisions regarding goals, penalties, and red cards."
+        ];
+
+        document.getElementById('generate-fact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact-display').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
